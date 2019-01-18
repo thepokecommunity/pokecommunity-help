@@ -10,8 +10,8 @@
 
 	// PokéCommunity UI Design and App Code
 	function webfont_links() {
-	    echo `<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700" rel="stylesheet" type="text/css">` . "\n";
-	    echo `<script defer src="https://www.pokecommunity.com/library/fontawesome-pro-5.6.3-web/js/all.js"></script>` . "\n";
+	    echo '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700" rel="stylesheet" type="text/css">' . "\n";
+	    echo '<script defer src="https://www.pokecommunity.com/library/fontawesome-pro-5.6.3-web/js/all.js"></script>' . "\n";
 	}
 	add_action( 'wp_head', 'webfont_links' );
 
