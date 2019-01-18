@@ -9,10 +9,11 @@
 ?>
 
 <div id="featured-content" class="featured-content">
-	<h1 class="column-section-header hero-text">Support</h1>
 	<div class="featured-content-inner">
-	<?php
-		get_search_form();
-	?>
+		<div class="welcome-to-help">
+			Welcome to Help
+		</div>
+		
+		<?php get_search_form(); ?>
 	</div><!-- .featured-content-inner -->
 </div><!-- #featured-content .featured-content -->

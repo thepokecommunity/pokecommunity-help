@@ -35,7 +35,7 @@
 	add_action( 'wp_footer', 'bootstrapjs_link' );
 	
 	function headroomjs_link() {
-	    echo `<script src="https://www.pokecommunity.com/library/headroom.min.js"></script>
+	    echo '<script src="https://www.pokecommunity.com/library/headroom.min.js"></script>
 	    
 	    		<script>
 			  var omnibar = document.querySelector(".omnibar");
@@ -51,17 +51,15 @@
 			      unpinned: "nav-unfixed"
 			    },
 			    onUnpin : function() {
-			      $("#communityNav").collapse('hide');
+			      jQuery("#communityNav").collapse(`hide`);
 			    }
 			  }).init();
-		</script>
-	    
-	    `;
+		</script>';
 	}
 	add_action( 'wp_footer', 'headroomjs_link' );
 	
 	function credits() {
-	    echo `<footer class="page-footer">
+	    echo '<footer class="page-footer">
 
 			<div class="footer-brand">
 			<p><span class="footer-logo"><img src="https://www.pokecommunity.com/images/logo.php?fill=e3421a" alt="The PokéCommunity" class="footer-logo-img"></span></p>
@@ -137,7 +135,7 @@
 			
 			</form>
 			
-		</footer>`;
+		</footer>';
 	}
 	
 	add_action('twentyfourteen_credits', 'credits');
