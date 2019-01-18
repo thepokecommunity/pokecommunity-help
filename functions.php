@@ -110,7 +110,7 @@
 			
 			</form>
 			
-		</footer>`
+		</footer>`;
 	}
 	
 	add_action('twentyfourteen_credits', 'credits');
