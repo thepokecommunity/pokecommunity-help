@@ -9,8 +9,8 @@
 
 	// PokéCommunity UI Design and App Code
 	function webfont_links() {
-	    echo '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700" rel="stylesheet" type="text/css">' . "\n" . '<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">' . "\n";
-	    echo '<link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet" type="text/css">' . "\n";
+	    echo `<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700" rel="stylesheet" type="text/css">` . "\n";
+	    echo `<script defer src="https://www.pokecommunity.com/library/fontawesome-pro-5.6.3-web/js/all.js"></script>` . "\n";
 	}
 	add_action( 'wp_head', 'webfont_links' );
 
@@ -34,36 +34,83 @@
 	add_action( 'wp_footer', 'bootstrapjs_link' );
 	
 	function credits() {
-	    echo '<div class="footer-text" id="copyright">
-<ul class="footer-pcext">
+	    echo `<footer class="page-footer">
 
-<li><a class="enabled" href="https://www.facebook.com/thePokeCommunity" style="background-color: #3b5998; border-color: #1c3b7d;" title="Get in touch via Facebook."><i class="fa fa-facebook"></i></a></li>
-
-<li><a class="enabled" href="https://twitter.com/PokeCommunity" style="background-color: #55ACEE; border-color: #3189cc;" title="Keeping the buzz fed on Twitter!"><i class="fa fa-twitter"></i></a></li>
-
-<!-- <li><a class="enabled" href="https://thepokecommunity.tumblr.com/" style="background-color: #35465c; border-color: #18212e;"><i class="fa fa-tumblr" title="Reblog us on Tumblr!"></i></a></li> -->
-
-<li><a class="enabled" href="https://plus.google.com/100263032273573080936/?prsrc=3" style="background-color: #dd4b39; border-color: #c3311f"><i class="fa fa-google-plus" title="Make us part of your circle on Google+!"></i></a></li>
-
-<!-- <li><a class="enabled" href="https://thepokecommunity.deviantart.com" style="background-color: #05CC47; border-color: #17913f" title="Now uploading to DeviantArt."><i class="fa fa-deviantart"></i></a></li> -->
-
-<li><a class="enabled" href="https://www.youtube.com/c/pokecommunity" style="background-color: white; border-color: #b31217; color: #e52d27" title="The PokéCommunity on YouTube. Now playing."><i class="fa fa-youtube-play"></i></a></li>
-
-</ul>
-
-<p style="whitespace: no-wrap">© 2002–2016 The PokéCommunity™, pokecommunity.com.</p>
-
-<p>Pokémon characters and images belong to The Pokémon Company International and Nintendo. This website is in no way affiliated with or endorsed by Nintendo, Creatures, GAMEFREAK, or The Pokémon Company International. We just love Pokémon.</p>
-
-<p>Your use of The PokéCommunity constitutes acceptance of our <a href="https://www.pokecommunity.com/misc.php?do=legal">Services Agreement</a> and <a href="https://www.pokecommunity.com/misc.php?do=privacy">Privacy Statement</a>.</p>
-
-
-
-<p class="meta-softwareversion">PokéCommunity Daily 1.3</p>
-
-<p><a href="https://www.pokecommunity.com/misc.php?do=colophon">Acknowledgements</a></p>
-<p><a href="https://www.pokecommunity.com/misc.php?do=branding">Use of Community Assets</a></p>
-</div>' . "\n";
+			<div class="footer-brand">
+			<p><span class="footer-logo"><img src="https://www.pokecommunity.com/images/logo.php?fill=e3421a" alt="The PokéCommunity" class="footer-logo-img"></span></p>
+			<p class="slogan">For all Pokémon fans, 15 years and counting.</p>
+			</div>
+			
+			<form action="https://www.pokecommunity.com/index.php" method="get">
+			
+			<div class="row above-footer-text">
+			<div class="col-sm-12">
+				<div class="container-fluid footer-navlinks">
+					<div class="row">
+						<div class="col-sm col-xs-6 resource-block">
+							<a class="link-2-staff" href="https://www.pokecommunity.com/showgroups.php">
+								<div class="link-circle"><i class="fab fa-black-tie"></i></div>
+								<h3>Staff</h3>
+							</a>
+						</div>
+						<div class="col-sm col-xs-6 resource-block">
+							<a class="link-3-rules" href="https://www.pokecommunity.com/misc.php?do=rules">
+								<div class="link-circle"><i class="fal fa-book"></i></div>
+								<h3>Rules</h3>
+							</a>
+						</div>
+						<div class="col-sm col-xs-6 resource-block">
+							<a class="link-6-forums" href="https://www.pokecommunity.com/about/">
+								<div class="link-circle"><i class="fal fa-info"></i></div>
+								<h3>About Us</h3>
+							</a>
+						</div>
+						<div class="col-sm col-xs-6 resource-block">
+							<a class="link-1-online" href="https://www.pokecommunity.com/sendmessage.php">
+								<div class="link-circle"><i class="fas fa-paper-plane"></i></div>
+								<h3>Contact Us</h3>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="row footer-text">
+			<div class="col-sm-3">
+			<ul class="footer-pc-services">
+			
+			<li><a class="enabled" href="http://www.facebook.com/thePokeCommunity" style="background-color: #3b5998; border-color: #1c3b7d;" title="Get in touch via Facebook."><i class="fab fa-facebook-f"></i></a></li>
+			
+			<li><a class="enabled" href="http://twitter.com/PokeCommunity" style="background-color: #55ACEE; border-color: #3189cc;" title="Keeping the buzz fed on Twitter!"><i class="fab fa-twitter"></i></a></li>
+			
+			<li><a class="enabled" href="https://www.instagram.com/thepokecommunity/" style="background-color: #e95950; border-color: #b31217; color: white" title="Follow us on Instagram, see cool photos and more!"><i class="fab fa-instagram"></i></a></li>
+			
+			<li><a class="enabled" href="https://www.youtube.com/c/pokecommunity" style="background-color: #e52d27; border-color: #b31217; color: white" title="The PokéCommunity on YouTube. Now playing."><i class="fab fa-youtube"></i></a></li>
+			
+			<li><a href="http://feeds.feedburner.com/PokeCommunity" class="enabled" style="background-color: #f26522; border-color: #d75a1e;"><i class="fas fa-rss" title="Subscribe to our RSS feed and be up-to-date with the latest posts."></i></a></li>
+			
+			</ul>
+			</div>
+			<div class="col-sm-9">
+			
+			<p><span style="whitespace: no-wrap">© 2002–2019 The PokéCommunity™, pokecommunity.com.</span><br>
+			Your use of PokéCommunity constitutes acceptance of our <a href="https://www.pokecommunity.com/misc.php?do=legal">Services Agreement</a> and <a href="https://www.pokecommunity.com/about/privacy">Privacy Statement</a>.</p>
+			
+			
+			
+			<p class="meta-softwareversion">PokéCommunity Forums 2.0</p>
+			
+			<p><a href="https://www.pokecommunity.com/about/acknowledgements/">Acknowledgements</a></p>
+			<p style="display: none;"><a href="https://www.pokecommunity.com/misc.php?do=branding">Use of Community Assets</a></p>
+			
+			</div>
+			</div>
+			
+			
+			</form>
+			
+		</footer>`
 	}
 	
 	add_action('twentyfourteen_credits', 'credits');
