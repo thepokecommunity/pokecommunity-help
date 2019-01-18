@@ -5,6 +5,7 @@
 	add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 	function theme_enqueue_styles() {
 	    wp_enqueue_style( 'bootstrap-style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' );
+	    wp_enqueue_style( 'pokecommunity-style', 'https://www.pokecommunity.com/styles/generate_css.php/help.scss?ver=001' );
 	}	
 
 	// PokéCommunity UI Design and App Code
@@ -32,6 +33,32 @@
 	    echo '<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>' . "\n";
 	}
 	add_action( 'wp_footer', 'bootstrapjs_link' );
+	
+	function headroomjs_link() {
+	    echo `<script src="https://www.pokecommunity.com/library/headroom.min.js"></script>
+	    
+	    		<script>
+			  var omnibar = document.querySelector(".omnibar");
+			  new Headroom(omnibar, {
+			    tolerance: {
+			      down : 2,
+			      up : 5
+			    },
+			    offset : 100,
+			    classes: {
+			      initial: "slide",
+			      pinned: "nav-fixed",
+			      unpinned: "nav-unfixed"
+			    },
+			    onUnpin : function() {
+			      $("#communityNav").collapse('hide');
+			    }
+			  }).init();
+		</script>
+	    
+	    `;
+	}
+	add_action( 'wp_footer', 'headroomjs_link' );
 	
 	function credits() {
 	    echo `<footer class="page-footer">
