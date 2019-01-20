@@ -1,0 +1,46 @@
+@import 'variables';
+
+.hero-content {
+  background-color: $grey-color;
+  padding-top: 68px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 110px;
+  }
+
+  .hero-content-main {
+    align-items: center;
+
+    .hero-about {
+      flex-basis: 40%;
+    }
+
+    .hero-graphic {
+      flex-basis: 60%;
+      text-align: center;
+
+      // @TEMP
+      color: $help-color;
+      font-size: 2em;
+      transform: rotate(-18deg);
+    }
+  }
+
+  .hero-content-search {
+    form {
+      display: flex;
+      align-items: center;
+
+      label {
+        display: block;
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+
+      input[type="submit"] {
+        margin-left: 10px;
+      }
+    }
+  }
+}

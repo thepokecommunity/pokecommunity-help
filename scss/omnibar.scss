@@ -1,0 +1,705 @@
+@import 'variables';
+
+#masthead {
+position: fixed;
+top: 0;
+}
+
+.admin-bar #masthead {
+top: 32px;
+}
+
+#wpadminbar {
+min-height: 32px;
+}
+
+#site-header {
+position: relative;
+z-index: 3;
+}
+
+.site-header {
+background-color: #000;
+position: relative;
+width: 100%;
+z-index: 4;
+}
+
+@media screen and (max-width:782px) {
+/* Do not touch this breakpoint. It's only used to stop WordPress from being evil. */
+.admin-bar #masthead {
+  top: 46px;
+}
+}
+
+/* **** for all dropdown menus **** */
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+color: white;
+background-color: #2e71b4;
+}
+
+/* @group 1.2.1 Navigation */
+
+.omnibar .navbar-nav > li.app-title > a {
+  font-weight: 300;
+  font-size: 15pt;
+  padding-left: 10px;
+  font-style: normal;
+  text-transform: inherit;
+}
+
+/* override default responsive classes for the omnibar */
+
+.omnibar .container-fluid>.navbar-collapse, .omnibar .container-fluid>.navbar-header, .omnibar .container>.navbar-collapse, .omnibar .container>.navbar-header {
+  margin-right: 0;
+  margin-left: 0
+}
+
+.omnibar .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.omnibar .navbar-header {
+  float: left;
+}
+
+.omnibar>.container .navbar-brand, .omnibar>.container-fluid .navbar-brand {
+  margin-left: -15px;
+}
+      
+/* key omnibar classes */
+
+.omnibar {
+  border:0;
+  border-radius:0;
+  min-height:20px;
+  margin-bottom:0;
+  background: #404040;
+  background: rgba(64, 64, 64, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  border-width:0 0 1px;
+  position:fixed;
+  right:0;
+  left:0;
+  z-index:1030;/*
+
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.3);
+*/
+}
+
+.omnibar .sub-navigation {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: static;
+    overflow-y: hidden;
+    transition: height 0.2s ease;
+}
+
+.omnibar .sub-navigation.nav-unfixed {
+    position: static;
+    height: 0;
+}
+
+.omnibar .sub-navigation button.explore-PC {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 8pt;
+    float: left;
+    color: white;
+    background: none;
+    box-shadow: none;
+}
+
+.omnibar .sub-navigation .navbar-nav > li > a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 10pt;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: background-color 0.1s ease;
+}
+
+.omnibar .sub-navigation .navbar-nav > li > a:hover, .omnibar .sub-navigation .navbar-nav > li > a:active {
+    background-color: rgba(227, 66, 26, 0.7);
+    color: white;
+}
+.omnibar .sub-navigation .navbar-nav > li > a.link-help {
+  color: $help-color;
+}
+
+
+.omnibar.affix, .omnibar.affix-bottom {
+  top:0;
+  border-width:0 0 1px;
+  position:fixed;
+  right:0;
+  left:0;
+  z-index:1030
+}
+
+.omnibar .navbar-nav>li>a {
+  color: white;
+}
+
+.omnibar .navbar-nav>li>a:hover {
+  color: rgba(255, 129, 0, 1);
+}
+
+.omnibar .navbar-nav>.open>a, .omnibar .navbar-nav>.open>a:focus, .omnibar .navbar-nav>.open>a:hover {
+  color: #555;
+  background-color: #e7e7e7
+}
+
+.omnibar .no-collapse > li > a:focus, .omnibar .no-collapse > li > a:hover {
+  color: white;
+} 
+
+.omnibar > .container-fluid .navbar-brand {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+
+}
+
+.brand-logo {
+  background-color: $help-color !important;
+}
+
+.omnibar .navbar-brand img.brandimage {
+  max-height: 100%;
+}
+
+.omnibar .navbar-text {
+  margin-top:5px;
+  margin-bottom:5px;
+  color: #808080!important
+}
+
+.omnibar .navbar-nav>li>a>.badge {
+  padding: 2px 4px;
+}
+
+.omnibar .navbar-nav.nav-breadcrumb li a {
+  display: none;
+  color: #888;
+  background-color: #d7d7d7;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition-property: max-width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.breadcrumb-node-label-back {
+  display: none;
+}
+
+.omnibar .navbar-nav li.current_page_item a {
+  background-color: #d7d7d7;
+  color: #555;
+}
+
+.omnibar .navbar-nav > li.app-title.current_page_item > a {
+  background-color: transparent;
+  color: white;
+}
+
+.omnibar .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.omnibar .nav>li>a>.badge,.navbar-text>.badge {
+  position: absolute;
+  bottom: 10px;
+  right: 7px;
+  font-size: 8pt;
+  background: #db3c12;
+  color: white;
+}
+      
+.omnibar li.user-menu a.dropdown-toggle {
+  background: #f7f7f7;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+}
+
+.omnibar li.user-menu a.dropdown-toggle:focus, .omnibar li.user-menu a.dropdown-toggle:hover {
+  background: #eee;
+  background: rgba(238, 238, 238, 0.95);
+  color: #222;
+}
+
+.omnibar li.adminlink > a {
+  padding-left: 3px; padding-right: 3px;
+  background: #cf0505 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.omnibar li.user-menu a.dropdown-toggle .username {
+  display: none;
+}
+
+.omnibar li.user-menu a.dropdown-toggle .useravatar {
+  max-height: 40px;
+  max-width: 90px;
+}
+
+.omnibar .dropdown-menu.has-notifications, .dropdown-menu.has-messages {
+  max-height:80vh;
+  overflow:auto;
+}
+
+.omnibar .dropdown-header.notifications-header {
+  border-bottom: 1px solid #e5e5e5;
+  background: rgba(255,255,255,0.9);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.omnibar .dropdown-header.notifications-header h1 {
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.omnibar .dropdown-menu .notification-bit {
+  width:450px;
+  max-width:100%
+}
+
+.omnibar .dropdown-menu .notification-bit:after {
+  display: table;
+  content: "";
+  clear: left;
+}
+
+.omnibar .dropdown-menu .notification-bit.unread {
+  background-color: rgba(216, 238, 255, 0.7);
+}
+
+.omnibar .dropdown-menu > li > form > .form-group {
+  padding: 3px 20px;
+  margin: 0;
+}
+
+.omnibar .dropdown-menu>li.notification-bit:hover,.dropdown-menu>li.notification-bit:focus {
+  background-color:#d3e6f4
+}
+
+.omnibar .dropdown-menu>li.notification-bit>a:hover,.dropdown-menu>li.notification-bit>a:focus {
+  background-color:inherit;
+  color:#333
+}
+
+.omnibar .dropdown-menu>li>a.notification-content {
+  clear: left;
+  min-height: 60px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content>div.notification-data {
+  white-space: normal;
+  flex: 1;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content img.avatar {
+  float:left;
+  max-height:48px;
+  max-width:48px;
+  margin-right: 10px;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  align-self:center;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content>div.notification-data .message {
+  font-size: 14px;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content>div.notification-data .message .notification-date {
+  font-size: 11px;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content>div.notification-data .subject {
+  font-size: 11px;
+  color: #538fca;
+}
+
+.omnibar .dropdown-menu>li>a.notification-content>div.notification-data .sample {
+  font-size: 11px;
+}
+
+.omnibar .dropdown-menu>li>a.notification-clearbuttonlink {
+  float: right;
+  display: inline;
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 3px
+}
+
+.omnibar .dropdown-menu>li>a.notification-clearbuttonlink img {
+  height:100%;
+}
+
+.omnibar .dropdown-menu>li[role="option-container"] {
+  display:block;
+  padding:3px 20px;
+  clear:both;
+  font-weight:400;
+  color:#333
+}
+
+.omnibar .dropdown-menu>li[role="menu-notice"] {
+  display:block;
+  padding:3px 20px;
+  clear:both;
+  font-weight:400;
+  color:#333;
+  white-space:nowrap
+}
+
+.omnibar .dropdown-menu.has-notifications .nonewstuff {
+  display: none;
+}
+
+.omnibar .dropdown-menu.has-messages .nonewstuff {
+  display: none;
+}
+
+.omnibar .dropdown-menu>li.nonewstuff {
+  width:450px;
+  max-width:100%;
+  padding: 20px 30px;
+  text-align:center;
+  white-space:normal
+}
+
+.omnibar .dropdown-menu>li.nonewstuff i.fa {
+  font-size:80px;
+  color:#ddd;
+  text-shadow:0 -1px 0 #ccc
+}
+
+.omnibar .dropdown-menu>li.nonewstuff h1 {
+  margin-top:0;
+  margin-bottom:6px;
+  font-weight:300;
+  font-size:18px;
+}
+
+.omnibar .dropdown-menu>li.nonewstuff p {
+  margin:0;
+  font-weight:700;
+  font-size:8pt
+}
+
+.omnibar .dropdown-menu>li>span.welcome-text {
+  max-width:250px;
+  white-space:normal;
+  font-weight:700;
+  font-size:8pt;
+  color:#555
+}
+
+.omnibar li.user-menu ul.dropdown-menu {
+  width: 450px;
+}
+
+.omnibar #primary-menu.navbar-nav > li > a {
+  font-family: Raleway, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #a2a2a2;
+  font-size: 11pt;
+  font-style: normal;
+  text-transform: none;
+  padding-left: 10px; padding-right: 10px;
+}
+
+.omnibar #primary-menu.navbar-nav > li > a:hover {
+  color: white;
+}
+
+.omnibar #primary-menu.navbar-nav > li.open > a, .omnibar #primary-menu.navbar-nav > li.open > a:hover {
+  color: #575757;
+}
+
+.omnibar #primary-menu.navbar-nav > li.menu-news > a:hover, .omnibar #primary-menu.navbar-nav > li.menu-news.active > a {
+  box-shadow: inset 0px -4px 0px -1px rgba(255, 129, 0, 1);
+}
+
+.omnibar #primary-menu.navbar-nav > li.menu-feature-articles > a:hover, .omnibar #primary-menu.navbar-nav > li.menu-feature-articles.active > a {
+  box-shadow: inset 0px -4px 0px -1px rgba(255, 221, 0, 1);
+}
+
+.omnibar #primary-menu.navbar-nav > li.menu-reviews > a:hover, .omnibar #primary-menu.navbar-nav > li.menu-reviews.active > a {
+  box-shadow: inset 0px -4px 0px -1px rgba(128, 231, 0, 1);
+}
+
+.omnibar #primary-menu.navbar-nav > li.menu-columns > a:hover, .omnibar #primary-menu.navbar-nav > li.menu-columns.active > a, .omnibar #primary-menu.navbar-nav > li.menu-columns.open > a {
+  box-shadow: inset 0px -4px 0px -1px rgba(57, 153, 255, 1);
+}
+
+.omnibar #primary-menu.navbar-nav > li.menu-guides > a:hover, .omnibar #primary-menu.navbar-nav > li.menu-guides.active > a, .omnibar #primary-menu.navbar-nav > li.menu-guides.open > a {
+  box-shadow: inset 0px -4px 0px -1px rgba(149, 68, 255, 1);
+}
+
+@media screen and (max-width: 374px) {
+  /* This isn't a standard Bootstrap breakpoint so don't use it unless you have a good reason */
+  .omnibar .breadcrumb-node-label {
+    display: none
+  }
+  .omnibar .breadcrumb-node-label-back {
+    display: inline;
+  }
+  .omnibar .dropdown-menu {
+    /* the 3DS browser is truly terrible */
+    max-height: 70vh;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 767px) {
+    .omnibar .sub-navigation button.explore-PC {
+        display: block;
+        width: 100%;
+        text-align: left;
+        float: none;
+    }
+
+    .omnibar .sub-navigation ul.navbar-nav {
+        display: none;
+        float: none;
+    }
+
+    .omnibar .sub-navigation ul.navbar-nav.closed {
+        display: none !important;
+    }
+
+    .omnibar .sub-navigation ul.navbar-nav > li {
+        float: none;
+    }
+
+    .omnibar .sub-navigation ul.navbar-nav > li > a {
+        float: none;
+        display: block;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 7px 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .omnibar .sub-navigation {
+        height: 28px;
+    }
+
+    .omnibar .sub-navigation button.explore-PC {
+        display: none;
+    }
+  
+  .omnibar .container-fluid>.navbar-collapse, .omnibar .container>.navbar-collapse {
+    margin-left: -15px;
+    float: left;
+  }
+      
+  .omnibar li.user-menu a.dropdown-toggle {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 6px;
+    height: 50px;			
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .omnibar li.user-menu a.dropdown-toggle .useravatar {
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+  }
+
+  .omnibar li.user-menu a.dropdown-toggle .username {
+    display: inline-block;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    margin-right: 6px;
+    margin-left: 6px;
+    font-weight: 300;
+  }
+
+  .omnibar .navbar-nav.nav-breadcrumb li:first-of-type a {
+    display: block;
+  }
+  
+  .omnibar .navbar-nav.nav-breadcrumb li:nth-last-of-type(1) a {
+    display: block;
+    letter-spacing: 0;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .omnibar .navbar-nav {
+    margin: 0;
+  }
+  
+  .omnibar .container-fluid>.navbar-collapse, .omnibar .container>.navbar-collapse {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  
+  .omnibar .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+  }
+  
+  .omnibar .navbar-nav .open .dropdown-menu>li>a:hover, .omnibar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: white;
+  }
+  
+  .omnibar .navbar-toggle {
+    font-family: Raleway, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    float: left;
+    padding: 6px 10px;
+    margin: 8px 5px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  .omnibar .navbar-toggle:focus, .omnibar .navbar-toggle:hover {
+    color: #333;
+  }
+  
+  .omnibar .nav.no-collapse {
+    float: left;
+  }
+  
+  .omnibar .nav.no-collapse>li {
+    position: static;
+  }
+  
+  .omnibar .nav.no-collapse>li>a {
+    position: static;
+  }
+  
+  .omnibar .nav.no-collapse>li>a.dropdown-toggle {
+    position: relative;
+  }
+  
+  .omnibar .nav.no-collapse .open .dropdown-menu {
+    position: absolute;
+    left: 0; right: 0;
+    float: right;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    border-radius: 0;
+  }
+
+.omnibar .navbar-right {
+  float: right !important;
+  margin-right: -15px;
+}
+
+
+.omnibar .nav.no-collapse>li {
+  float: left;
+}
+
+.omnibar .nav.no-collapse>li>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.omnibar .nav.no-collapse>li>a:hover {
+  color: white;
+}
+
+.omnibar .nav.no-collapse .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+
+}
+
+@media screen and (min-width: 992px) {
+  
+  .omnibar .app-title a:before {
+    content: "PokéCommunity "
+  }
+    
+  .omnibar .navbar-nav.nav-breadcrumb li:nth-last-of-type(1) a {
+    max-width: 200px;
+  }
+    
+  .omnibar .navbar-nav.nav-breadcrumb li:nth-last-of-type(1):hover a {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  
+  .omnibar .navbar-nav.nav-breadcrumb li a {
+    display: block;
+    max-width: 60px;
+  }
+  
+  .omnibar .navbar-nav.nav-breadcrumb li:hover a {
+    max-width: 200px;
+  }
+  
+  .omnibar .navbar-nav.nav-breadcrumb li:first-of-type a {
+    max-width: inherit;
+  }
+  
+  .omnibar .navbar-nav.nav-breadcrumb li:nth-last-of-type(1) a {
+    max-width: 200px;
+  }
+    
+  .omnibar .navbar-nav.nav-breadcrumb li:nth-last-of-type(1):hover a {
+    max-width: 400px;
+  }
+}

@@ -25,7 +25,8 @@ get_header(); ?>
 ?>
 	<div id="primary" class="content-area story-loop">
 		<div id="content" class="site-content" role="main">
-			<h1 class="column-section-header latest-stories">Latest Stories</h1>
+			<?php get_template_part('getting_started') ?>
+
 		<?php
 			if ( have_posts() ) :
 				// Start the Loop.

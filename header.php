@@ -47,17 +47,17 @@
 						<li class="nav-item "><a href="https://www.pokecommunity.com/forumdisplay.php?f=21" class="nav-link link-art">Art</a></li>
 						<li class="nav-item "><a href="http://pokecommunity.psim.us/" class="nav-link link-battleserver">Battle</a></li>
 						<li class="nav-item "><a href="https://discord.gg/pokecommunity" class="nav-link link-discord">Discord</a></li>
+						<li class="nav-item"><a href="<?php echo get_site_url() ?>" class="nav-link link-help">Help</a></li>
 					</ul>
 				</div>
 			</nav>
 			<nav class="navbar omnibar-main navbar-expand navbar-dark">
-				<a class="navbar-brand" href="https://www.pokecommunity.com/index.php">
+				<a class="navbar-brand" href="<?php echo get_site_url(); ?>">
 					<span class="brand-logo"><img alt="PokéCommunity" src="https://www.pokecommunity.com/images/brand-red-transparent.png" class="brandimage-selectable" title="PokéCommunity"></span>
 					<span class="brand-text d-none d-sm-inline app-title">PokéCommunity Help</span>
 				</a>
 			
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					
 						<ul class="navbar-nav mr-auto">
 						</ul>
 				</div>

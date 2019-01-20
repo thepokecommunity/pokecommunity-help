@@ -1,19 +1,23 @@
-<?php
-/**
- * The template for displaying featured content
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-?>
+<div class="hero-content">
+	<div class="wrap">
+		<div class="hero-content-main d-none d-md-flex">
+			<div class="hero-about">
+				<h1>
+					PokéCommunity Help
+				</h1>
 
-<div id="featured-content" class="featured-content">
-	<div class="featured-content-inner">
-		<div class="welcome-to-help">
-			Welcome to Help
+				<p class="subtitle">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus ultricies lobortis. Maecenas quis nulla nisi. Sed nulla nisi, tempus at lobortis sed, aliquet ut neque.
+				</p>
+			</div>
+
+			<div class="hero-graphic">
+				[graphic goes here]
+			</div>
 		</div>
-		
-		<?php get_search_form(); ?>
-	</div><!-- .featured-content-inner -->
-</div><!-- #featured-content .featured-content -->
+
+		<div class="hero-content-search">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
+</div>
