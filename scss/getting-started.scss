@@ -9,7 +9,8 @@ $getting-started-colors: (
 
 .getting-started {
   display: flex;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 10px !important;
   
   .gs-item {
     flex-basis: 33.333333333%;
