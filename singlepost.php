@@ -42,24 +42,9 @@
 				?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
-	
-		<div class="pokecomm-adunit adunit-daily-below-entry-header">
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- Daily - Below Article Header -->
-			<ins class="adsbygoogle"
-				 style="display:block"
-				 data-ad-client="ca-pub-4340825110452494"
-				 data-ad-slot="6128715920"
-				 data-ad-format="auto"
-				 data-full-width-responsive="true"></ins>
-			<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
 		
 		<div class="entry-content">
 			<?php
-				get_sidebar( 'post-inline-right' );
 				
 				/* translators: %s: Name of current post */
 				the_content( sprintf(

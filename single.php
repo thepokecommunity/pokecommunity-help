@@ -35,20 +35,13 @@ get_header(); ?>
 		</div><!-- #content -->
 		
 		<?php
-			if (class_exists('scVBConnector')) {
-				echo("<div id='comments'>");
-				echo scVBConnector::$storedCommentsStr;
-				echo("</div>");
+			$pokecommunity_threadid = get_post_meta( get_the_ID(), 'threadid', true );
+			if ( empty( $pokecommunity_threadid ) ) {
+				$pokecommunity_threadid = get_post_meta( get_the_ID(), 'vbconnectorthreadid', true );
 			}
-			else {
-				$pokecommunity_threadid = get_post_meta( get_the_ID(), 'threadid', true );
-				if ( empty( $pokecommunity_threadid ) ) {
-					$pokecommunity_threadid = get_post_meta( get_the_ID(), 'vbconnectorthreadid', true );
-				}
-				// Check if the custom field has a value.
-				if ( ! empty( $pokecommunity_threadid ) ) {
-				    echo "<div class='comments threadlink'><a href='https://www.pokecommunity.com/showthread.php?t=$pokecommunity_threadid'>Read comments</a></div>";
-				}
+			// Check if the custom field has a value.
+			if ( ! empty( $pokecommunity_threadid ) ) {
+					echo "<div class='comments threadlink'><a href='https://www.pokecommunity.com/showthread.php?t=$pokecommunity_threadid'>Read comments</a></div>";
 			}
 
 			// Previous/next post navigation.
@@ -65,3 +58,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+get_footer();

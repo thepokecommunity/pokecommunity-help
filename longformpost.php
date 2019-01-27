@@ -53,8 +53,6 @@
 	
 		<div class="entry-content">
 			<?php
-				get_sidebar( 'post-inline-right' );
-				
 				/* translators: %s: Name of current post */
 				the_content( sprintf(
 					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ),
