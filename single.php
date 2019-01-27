@@ -35,7 +35,7 @@ get_header(); ?>
 		</div><!-- #content -->
 		
 		<?php
-			if (class_exists(scVBConnector)) {
+			if (class_exists('scVBConnector')) {
 				echo("<div id='comments'>");
 				echo scVBConnector::$storedCommentsStr;
 				echo("</div>");
@@ -65,6 +65,3 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();

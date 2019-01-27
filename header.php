@@ -54,12 +54,17 @@
 			<nav class="navbar omnibar-main navbar-expand navbar-dark">
 				<a class="navbar-brand" href="<?php echo get_site_url(); ?>">
 					<span class="brand-logo"><img alt="PokéCommunity" src="https://www.pokecommunity.com/images/brand-red-transparent.png" class="brandimage-selectable" title="PokéCommunity"></span>
-					<span class="brand-text d-none d-sm-inline app-title">PokéCommunity Help</span>
+					<span class="brand-text app-title">
+						<span class=" d-none d-sm-inline">PokéCommunity</span>
+						Help
+					</span>
 				</a>
 			
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav mr-auto">
-						</ul>
+				</div>
+
+				<div class="omnibar-search">
+					<?php get_search_form() ?>
 				</div>
 			</nav>
 	</div><!-- #masthead -->

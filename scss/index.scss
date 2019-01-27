@@ -1,3 +1,5 @@
+@import 'variables';
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 	background-color: white;
@@ -24,23 +26,11 @@ body {
 	h1.column-section-header:before {
 		content: "";
 		display: block;
-		background: #cf0054;
+		background: $help-color;
 		height: 4px;
 		width: 40px;
 		margin-bottom: 5px;
 		margin-top: 10px;
-	}
-	
-	h1.column-section-header.hero-text:before {
-		background: var(--branding-color-dark);
-	}
-	
-	h1.column-section-header.latest-stories {
-		margin-bottom: 20px;
-	}
-	
-	h1.column-section-header.latest-stories:before {
-		background: var(--branding-color);
 	}
 	
 	@media screen and (min-width: 768px) {
@@ -923,41 +913,6 @@ body {
 		color: #2f2f2f;
 	}
 	
-/* @end */
-
-/* @group Article Category Colours */
-	
-	.category-news .cat-links a {
-		color: rgba(255, 129, 0, 1);
-	}
-	
-	.category-op-ed .cat-links a {
-		color: rgba(57, 153, 255, 1);
-	}
-	
-	.category-pokecommunity-feature .cat-links a {
-		color: rgba(57, 153, 255, 1);
-	}
-	
-	.category-fanbase .cat-links a {
-		color: rgba(57, 153, 255, 1);
-	}
-	
-	.category-ask-pc .cat-links a {
-		color: rgba(57, 153, 255, 1);
-	}
-	
-	.category-feature-articles .cat-links a, .category-longform .cat-links a {
-		color: rgba(232, 201, 0, 1);
-	}
-	
-	.category-reviews .cat-links a {
-		color: rgba(128, 231, 0, 1);
-	}
-	
-	.category-guides .cat-links a {
-		color: rgba(149, 68, 255, 1);
-	}
 /* @end */
 
 /* @group Author's Bio */

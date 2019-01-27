@@ -14,7 +14,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-time">
-		<i class="fa fa-clock-o"></i> <span class="time" data-timestamp="<?php echo get_the_time('U') ?>"><?php echo get_the_time('F j, Y, g:i A'); ?></span>
+		<i class="far fa-clock"></i> <span class="time" data-timestamp="<?php echo get_the_time('U') ?>"><?php echo get_the_time_short() ?></span>
 	</div>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 	<?php

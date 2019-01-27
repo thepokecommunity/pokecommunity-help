@@ -10,10 +10,14 @@ $getting-started-colors: (
 .getting-started {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px !important;
+  padding-top: 0 !important;
   
+  @media screen and(min-width: 768px) {
+    padding-top: 30px !important;
+  }
+
   .gs-item {
-    flex-basis: 33.333333333%;
+    flex-basis: 32.333333333%;
     text-align: center;
     color: inherit;
     font-size: 14pt;
@@ -30,6 +34,7 @@ $getting-started-colors: (
       &.gs-#{$class} {
         .border-bottom {
           background-color: $color;
+
         }
 
         .i-wrapper {
@@ -39,9 +44,7 @@ $getting-started-colors: (
     }
 
     @media screen and (max-width: 768px) {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3) {
+      &:nth-child(3n):not(:last-child) {
         margin-bottom: 1em;
       }
     }
@@ -56,6 +59,14 @@ $getting-started-colors: (
 
     .i-wrapper {
       font-size: 3rem;
+      color: white;
+
+      // set the size so the page doesn't shift as the icons load
+      height: 72px;
+      width: 72px;
+      margin: auto;
+
+      border-radius: 50%;
     }
 
     .border-bottom {
@@ -64,7 +75,7 @@ $getting-started-colors: (
       @media screen and (min-width: 768px) {
         display: block;
 
-        height: 3px;
+        height: 5px;
         width: 50%;
         margin: auto;
         margin-top: 5px;

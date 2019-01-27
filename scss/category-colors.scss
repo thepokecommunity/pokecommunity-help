@@ -1,0 +1,11 @@
+@import 'variables';
+
+$category-colors: (
+  guides: $help-color,
+);
+
+@each $class, $color in $category-colors {
+  .category-#{$class} .cat-links a {
+    color: $color !important;
+  }
+}

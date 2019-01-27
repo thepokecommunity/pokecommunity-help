@@ -5,7 +5,7 @@
 	add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 	function theme_enqueue_styles() {
 	    wp_enqueue_style( 'bootstrap-style', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' );
-	    wp_enqueue_style( 'pokecommunity-style', 'https://www.pokecommunity.com/styles/generate_css.php/help.scss?ver=001' );
+			wp_enqueue_style( 'pokecommunity-style', 'https://www.pokecommunity.com/styles/generate_css.php/help.scss?ver=001' );
 	}	
 
 	// PokéCommunity UI Design and App Code

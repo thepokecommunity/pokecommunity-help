@@ -1,12 +1,18 @@
 @import 'variables';
 
 .hero-content {
+  padding-top: 90px;
   background-color: $grey-color;
-  padding-top: 68px;
-  margin-bottom: 20px;
-
+  
   @media screen and (min-width: 768px) {
-    padding-top: 110px;
+    padding-top: 68px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2em;
+    .wrap {
+      padding-bottom: 0;
+    }
   }
 
   .hero-content-main {
@@ -14,6 +20,10 @@
 
     .hero-about {
       flex-basis: 40%;
+
+      h1 {
+        font-weight: 400;
+      }
     }
 
     .hero-graphic {
