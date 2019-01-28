@@ -25,7 +25,6 @@ get_header(); ?>
           endif;
         ?>
       </header><!-- .archive-header -->
-            <div id="pmd-place-header" class="pomad-placement" data-pmd-placement-name="header"></div>
       <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
