@@ -229,8 +229,7 @@ endif;
 if(!function_exists('get_the_time_short')):
 function get_the_time_short() {
 	$phrase = human_time_diff(get_the_time('U'), current_time('timestamp'));
-	return implode('', array_map(function($word) {
-		return $word[0];
-	}, explode(' ', $phrase)));
+	preg_match('/\d+\s./', $phrase, $matches);
+	return str_replace(' ', '', $matches[0]);
 }
 endif;
