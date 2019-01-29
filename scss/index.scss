@@ -1,12 +1,20 @@
 @import 'variables';
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 	background-color: white;
 	color: #2f2f2f;
+	> .site {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		> * {
+			flex-shrink: 0;
+		}
+		> .site-main {
+			flex: 1 0 auto;
+		}
+	}
 }
-
-
 
 .screen-reader-text {
 	display: none;
